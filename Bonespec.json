@@ -34,6 +34,9 @@
         "files" : [
             "model\/BoneModel.swift"
         ],
+        "scripts": [
+            "vapor xcode -y"
+        ],
         "pluginData": {},
         "name" : "model"
     }
