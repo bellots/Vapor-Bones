@@ -16,7 +16,7 @@
           {
               "placeholder": "// ➡️ Controller position",
               "filePath": "Sources/App/routes.swift",
-              "text": "    let {{name | lowercase}}Controller = {{name | firstUppercase}}Controller() \ntry router.register(collection: {{name | lowercase}}Controller)"
+              "text": "\tlet {{name | lowercase}}Controller = {{name | firstUppercase}}Controller() \n\ttry router.register(collection: {{name | lowercase}}Controller)\n\n"
           }
       ]
     },
