@@ -12,11 +12,6 @@ struct {{name | firstUppercase}}Controller:RouteCollection{
         {{name | lowercase}}Route.post({{name}}.self, use: saveHandler)
         {{name | lowercase}}Route.put({{name}}.self, at: {{name}}.parameter, use: updateHandler)
         {{name | lowercase}}Route.delete({{name}}.parameter, use: deleteHandler)
-        {{name | lowercase}}Route.get("search", use: searchHandler)
-        {{name | lowercase}}Route.get("search", "deep", use: deepSearchHandler)
-        {{name | lowercase}}Route.get("first", use: firstHandler)
-        {{name | lowercase}}Route.get("sorted", use: sortedHandler)
-        {{name | lowercase}}Route.get({{name}}.parameter, "user", use: getUserHandler)
     }
     
     /// Get all the {{name | lowercase}}s

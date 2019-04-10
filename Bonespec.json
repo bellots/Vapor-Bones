@@ -11,7 +11,14 @@
         "controller\/BoneController.swift"
       ],
       "pluginData": {},
-      "name" : "controller"
+      "name" : "controller",
+      "otherFilesRules": [
+          {
+              "placeholder": "// ➡️ Controller position",
+              "filePath": "routes.swift",
+              "text": "    let {{name | lowercase}}Controller = {{name | firstUppercase}}Controller() \ntry router.register(collection: {{name | lowercase}}Controller)"
+          }
+      ]
     },
     {
       "placeholder" : "EmptyBone",
