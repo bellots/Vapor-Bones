@@ -15,7 +15,7 @@
       "otherFilesRules": [
           {
               "placeholder": "// ➡️ Controller position",
-              "filePath": "routes.swift",
+              "filePath": "Sources/App/routes.swift",
               "text": "    let {{name | lowercase}}Controller = {{name | firstUppercase}}Controller() \ntry router.register(collection: {{name | lowercase}}Controller)"
           }
       ]
