@@ -10,3 +10,5 @@ extension {{name | firstUppercase}}:Parameter{}
 extension {{name | firstUppercase}}:Migration{}
 extension {{name | firstUppercase}}:Content{}
 
+
+// ➡️ RelationShips
