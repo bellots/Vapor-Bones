@@ -42,7 +42,7 @@
       {
         "placeholder": "// ➡️ RelationShips",
         "filePath": "Sources/App/Models/{{children | firstUppercase}}.swift",
-        "text": "extension {{children || firstUppercase}} \n\tvar {{parent || lowercase}}: Parent<{{children | firstUppercase}}, {{parent | firstUppercase}}>{\n\t\treturn parent({{parent}}ID)"
+        "text": "extension {{children || firstUppercase}} \n\tvar {{parent || lowercase}}: Parent<{{children | firstUppercase}}, {{parent | firstUppercase}}>{\n\t\treturn parent(\.{{parent}}ID)"
       }
     ]
     },
