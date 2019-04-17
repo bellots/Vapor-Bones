@@ -58,9 +58,7 @@ struct {{name | firstUppercase}}Controller:RouteCollection{
     /// - Throws: any error
     func updateHandler(_ req:Request, new{{name}}:{{name}}) throws -> Future<{{name}}>{
         return try req.parameters.next({{name}}.self).flatMap({ old{{name}} in
-            old{{name}}.userID = new{{name}}.userID
-            old{{name}}.long = new{{name}}.long
-            old{{name}}.short = new{{name}}.short
+
             return old{{name}}.save(on: req)
         })
     }
