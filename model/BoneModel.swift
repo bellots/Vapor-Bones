@@ -6,13 +6,6 @@ final class {{name | firstUppercase}}:Codable{
 
 	// ➡️ RelationShipKeys
 
-
-	init(
-		// ➡️ relationshipInitVariable
-		){
-
-		// ➡️ relationshipVariableAssignment
-	}
 }
 
 extension {{name | firstUppercase}}:PostgreSQLModel{}
