@@ -49,17 +49,6 @@
         "filePath": "Sources/App/Models/{{children | firstUppercase}}.swift",
         "text": "\n\tvar {{parent | lowercase}}ID: {{parent | firstUppercase}}.ID\n"
       }
-      //,
-      // {
-      //   "placeholder": "// ➡️ relationshipInitVariable",
-      //   "filePath": "Sources/App/Models/{{children | firstUppercase}}.swift",
-      //   "text": "\n{{parent | lowercase}}ID: {{parent | firstUppercase}}.ID,\n"
-      // },
-      // {
-      //   "placeholder": "// ➡️ relationshipVariableAssignment",
-      //   "filePath": "Sources/App/Models/{{children | firstUppercase}}.swift",
-      //   "text": "\n\tself.{{parent | lowercase}}ID = {{parent | lowercase}}ID\n"
-      // }
     ]
     },
     {
