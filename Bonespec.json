@@ -37,17 +37,17 @@
     "otherFilesRules" : [{
         "placeholder" : "// ➡️ RelationShips",
         "filePath" : "Sources/App/Models/{{parent | firstUppercase}}.swift",
-        "text": "extension {{parent || firstUppercase}} {\n\tvar {{children || lowercase}}s: Children<{{parent | firstUppercase}}, {{children | firstUppercase}}>{\n\t\treturn {{children | firstUppercase}}.children({{parent}}ID)\n\t}\n}\n"
+        "text": "extension {{parent || firstUppercase}} {\n\tvar {{children | lowercase}}s: Children<{{parent | firstUppercase}}, {{children | firstUppercase}}>{\n\t\treturn children(\\.{{parent | lowercase}}ID)\n\t}\n}\n"
       },
       {
         "placeholder": "// ➡️ RelationShips",
         "filePath": "Sources/App/Models/{{children | firstUppercase}}.swift",
-        "text": "extension {{children || firstUppercase}} {\n\tvar {{parent || lowercase}}: Parent<{{children | firstUppercase}}, {{parent | firstUppercase}}>{\n\t\treturn parent({{children | firstUppercase}}.{{parent}}ID)\n\t}\n}\n"
+        "text": "extension {{children || firstUppercase}} {\n\tvar {{parent | lowercase}}: Parent<{{children | firstUppercase}}, {{parent | firstUppercase}}>{\n\t\treturn parent(\\.{{parent | lowercase}}ID)\n\t}\n}\n"
       },
       {
         "placeholder": "// ➡️ RelationShipKeys",
         "filePath": "Sources/App/Models/{{children | firstUppercase}}.swift",
-        "text": "\n\tvar{{parent}}ID: {{parent | firstUppercase}}.ID\n"
+        "text": "\n\tvar {{parent | lowercase}}ID: {{parent | firstUppercase}}.ID\n"
       }
     ]
     },
