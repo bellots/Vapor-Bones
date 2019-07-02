@@ -35,17 +35,17 @@
     {
       "name" : "onetomany",
     "otherFilesRules" : [{
-        "placeholder" : "// ➡️ RelationShips",
+        "placeholder" : "// ➡️ Relationships",
         "filePath" : "Sources/App/Models/{{parent | firstUppercase}}.swift",
         "text": "extension {{parent || firstUppercase}} {\n\tvar {{children | lowercase}}s: Children<{{parent | firstUppercase}}, {{children | firstUppercase}}>{\n\t\treturn children(\\.{{parent | lowercase}}ID)\n\t}\n}\n"
       },
       {
-        "placeholder": "// ➡️ RelationShips",
+        "placeholder": "// ➡️ Relationships",
         "filePath": "Sources/App/Models/{{children | firstUppercase}}.swift",
         "text": "extension {{children || firstUppercase}} {\n\tvar {{parent | lowercase}}: Parent<{{children | firstUppercase}}, {{parent | firstUppercase}}>{\n\t\treturn parent(\\.{{parent | lowercase}}ID)\n\t}\n}\n"
       },
       {
-        "placeholder": "// ➡️ RelationShipKeys",
+        "placeholder": "// ➡️ RelationshipKeys",
         "filePath": "Sources/App/Models/{{children | firstUppercase}}.swift",
         "text": "\n\tvar {{parent | lowercase}}ID: {{parent | firstUppercase}}.ID\n"
       }
