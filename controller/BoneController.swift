@@ -1,6 +1,6 @@
 import Vapor
 import Fluent
-import FluentPostgreSQL
+{% if database %}{% if database == "psql"%}import FluentPostgreSQL{% else %}import FluentMySQL{% endif %}{% else %}import FluentPostgreSQL{%endif%}
 
 struct {{name | firstUppercase}}Controller:RouteCollection{
     func boot(router: Router) throws {
