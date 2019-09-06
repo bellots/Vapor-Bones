@@ -1,6 +1,13 @@
 import Vapor
-import FluentPostgreSQL
-
+{% if database %}
+    {% if database == "psql"%}
+        import FluentPostgreSQL
+    {% else %}
+        import FluentMySQL
+    {% endif %}
+{% else %}
+    import FluentPostgreSQL
+{%endif%}
 final class {{name | firstUppercase}}:Codable{
     var id:Int?
 }
