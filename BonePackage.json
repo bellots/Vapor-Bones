@@ -7,6 +7,15 @@
       ],
       "description" : "Create a controller",
       "name" : "controller"
+    },
+    {
+      "items" : [
+        "Controllers\/Controller.json",
+        "Models\/Model.json",
+        "Migrations\/Migration.json"
+      ],
+      "description" : "Create a model with its controller and migration",
+      "name" : "model"
     }
   ],
   "name" : "Vapor 4 Package"

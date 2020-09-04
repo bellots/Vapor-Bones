@@ -1,0 +1,15 @@
+{ 
+  "name": "model",
+  "paths": [{ 
+    "from": "BoneModel.swift",
+    "to": "App/Sources/Models/{{ name|firstUppercase }}.swift"
+  }],
+  "replacements": [],
+  "parameters": [
+    {
+      "name": "name",
+      "isRequired": true
+    }
+  ],
+  "plugins": {}
+}
