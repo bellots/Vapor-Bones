@@ -1,8 +1,8 @@
 { 
-  "name": "viewController",
+  "name": "controller",
   "paths": [{ 
     "from": "BoneController.swift",
-    "to": "App/Sources/ViewControllers/{{ name|firstUppercase }}ViewController.swift"
+    "to": "Sources/App/Controllers/{{ name|firstUppercase }}Controller.swift"
   }],
   "replacements": [],
   "parameters": [

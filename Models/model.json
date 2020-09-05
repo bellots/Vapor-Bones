@@ -2,7 +2,7 @@
   "name": "model",
   "paths": [{ 
     "from": "BoneModel.swift",
-    "to": "App/Sources/Models/{{ name|firstUppercase }}.swift"
+    "to": "Sources/App/Models/{{ name|firstUppercase }}.swift"
   }],
   "replacements": [],
   "parameters": [

@@ -2,7 +2,7 @@
   "name": "migration",
   "paths": [{ 
     "from": "BoneMigration.swift",
-    "to": "App/Sources/Migrations/{{ name|firstUppercase }}Migration.swift"
+    "to": "Sources/App/Migrations/{{ name|firstUppercase }}Migration.swift"
   }],
   "replacements": [],
   "parameters": [
