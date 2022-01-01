@@ -11,19 +11,25 @@ struct {{name|firstUppercase}}Controller: RouteCollection {
         }
     }
 
-    func index(req: Request) throws -> EventLoopFuture<[{{name|firstUppercase}}]> {
-        return {{name|firstUppercase}}.query(on: req.db).all()
+    static func index(req: Request) async throws -> [{{name|firstUppercase}}] {
+        return try await {{name|firstUppercase}}.query(on: req.db).all()
     }
 
-    func create(req: Request) throws -> EventLoopFuture<{{name|firstUppercase}}> {
+    func index(req: Request) async throws -> [{{name|firstUppercase}}] {
+       return try await {{name|firstUppercase}}Controller.index(req: req)
+    }
+
+    func create(req: Request) async throws -> <{{name|firstUppercase}}> {
         let {{name}} = try req.content.decode({{name|firstUppercase}}.self)
-        return {{name}}.save(on: req.db).map { {{name}} }
+        try await {{name}}.save(on: req.db)
+        return {{name}}
     }
 
-    func delete(req: Request) throws -> EventLoopFuture<HTTPStatus> {
-        return {{name|firstUppercase}}.find(req.parameters.get("{{name}}ID"), on: req.db)
-            .unwrap(or: Abort(.notFound))
-            .flatMap { $0.delete(on: req.db) }
-            .transform(to: .ok)
+    func delete(req: Request) async throws -> HTTPStatus {
+        guard let {{name}} = try await {{name|firstUppercase}}.find(req.parameters.get("{{name}}ID"), on: req.db) else {
+            throw Abort(.notFound)
+        }
+        try await {{name}}.delete(on: req.db)
+        return .ok 
     }
 }
